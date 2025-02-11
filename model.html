@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+  
+</head>
+
+<body>
+  <h1>Predict RainFall Analysis</h1>
+ <div class="login">
+	
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <label for="TempAvgF">TempAvgF:</label>
+      <input type="number" name="TempAvgF" step="any" required><br><br>
+
+      <label for="DewPointAvgF">DewPointAvgF:</label>
+      <input type="number" name="DewPointAvgF" step="any" required><br><br>
+
+      <label for="HumidityAvgPercent">HumidityAvgPercent:</label>
+      <input type="number" name="HumidityAvgPercent" step="any" required><br><br>
+
+      <label for="SeaLevelPressureAvgInches">SeaLevelPressureAvgInches:</label>
+      <input type="number" name="SeaLevelPressureAvgInches" step="any" required><br><br>
+
+      <label for="VisibilityAvgMiles">VisibilityAvgMiles:</label>
+      <input type="number" name="VisibilityAvgMiles" step="any" required><br><br>
+
+      <label for="WindAvgMPH">WindAvgMPH:</label>
+      <input type="number" name="WindAvgMPH" step="any" required><br><br>
+
+      <label for="TempAvgF1">TempAvgF:</label>
+      <input type="number" name="TempAvgF1" step="any" required><br><br>
+
+      <label for="DewPointAvgF1">DewPointAvgF:</label>
+      <input type="number" name="DewPointAvgF1" step="any" required><br><br>
+
+      <label for="HumidityAvgPercent1">HumidityAvgPercent:</label>
+      <input type="number" name="HumidityAvgPercent1" step="any" required><br><br>
+
+      <label for="SeaLevelPressureAvgInches1">SeaLevelPressureAvgInches:</label>
+      <input type="number" name="SeaLevelPressureAvgInches1" step="any" required><br><br>
+
+      <label for="VisibilityAvgMiles1">VisibilityAvgMiles:</label>
+      <input type="number" name="VisibilityAvgMiles1" step="any" required><br><br>
+
+      <label for="WindAvgMPH1">WindAvgMPH:</label>
+      <input type="number" name="WindAvgMPH1" step="any" required><br><br>
+
+      <label for="TempAvgF2">TempAvgF:</label>
+      <input type="number" name="TempAvgF2" step="any" required><br><br>
+
+      <label for="DewPointAvgF2">DewPointAvgF:</label>
+      <input type="number" name="DewPointAvgF2" step="any" required><br><br>
+
+      <label for="HumidityAvgPercent2">HumidityAvgPercent:</label>
+      <input type="number" name="HumidityAvgPercent2" step="any" required><br><br>
+
+      <label for="SeaLevelPressureAvgInches2">SeaLevelPressureAvgInches:</label>
+      <input type="number" name="SeaLevelPressureAvgInches2" step="any" required><br><br>
+
+      <label for="VisibilityAvgMiles2">VisibilityAvgMiles:</label>
+      <input type="number" name="VisibilityAvgMiles2" step="any" required><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
